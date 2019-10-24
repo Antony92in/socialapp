@@ -1,24 +1,24 @@
 <?php
 
-session_start();
+
 
 $name = $_SESSION['logged_user']->login;
 
 
-$link = mysql_connect("ec2-54-247-72-30.eu-west-1.compute.amazonaws.com", "zbkdvrivshuesq", "f8a99eafa9a3e1982aa35726fc67d5d21918d410883542131c0b37c2d77bfcd1", "public");
+$link = mysqli_connect("ec2-54-247-72-30.eu-west-1.compute.amazonaws.com", "zbkdvrivshuesq", "f8a99eafa9a3e1982aa35726fc67d5d21918d410883542131c0b37c2d77bfcd1", "d1iuf40nr11r3q");
 
-$query = ( "SELECT * FROM messages WHERE to = Antony1 ");
+$query = ( "SELECT * FROM `messages` WHERE `to` = '{$name}' ");
 
 
-$result = mysql_query($link, $query);
+$result = mysqli_query($link, $query);
 
 //print_r($result);
 
 
-if ($result = mysql_query($link, $query)) {
+if ($result = mysqli_query($link, $query)) {
 
     /* извлечение ассоциативного массива */
-    while ($row = mysql_fetch_assoc($result)) {
+    while ($row = mysqli_fetch_assoc($result)) {
         
      
      echo "От :" . $row["from"] . "<br>" . $row["text"] . "<br>" . $row["date"] . "<br>" ?>  
