@@ -3,22 +3,10 @@
 require "db.php";
 
 
-$mes = R::getAll( 'SELECT * FROM messages' );
-
-$count = count($mes);
-
-while ($row <= $count) {
-        
-     
-     echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<br>"?>  
-
-    <form action="message.php " method="GET">
-    <button type="submit">Ответить</button>    
+$inmes = R::exec( "SELECT * FROM messages WHERE touser = 'Baracus'" );
 
 
-    <?php echo "<hr>";
-     
-    }
+echo $inmes;
 
 
 
