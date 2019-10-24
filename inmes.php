@@ -7,7 +7,7 @@ $name = $_SESSION['logged_user']->login;
 
 $link = mysqli_connect("ec2-54-247-72-30.eu-west-1.compute.amazonaws.com", "zbkdvrivshuesq", "f8a99eafa9a3e1982aa35726fc67d5d21918d410883542131c0b37c2d77bfcd1", "public");
 
-$query = ( "SELECT * FROM messages WHERE to = $name ");
+$query = ( "SELECT * FROM messages WHERE to = Antony1 ");
 
 
 $result = mysqli_query($link, $query);
