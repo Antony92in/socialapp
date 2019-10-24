@@ -5,13 +5,18 @@ require "db.php";
 
 $mes = R::getAll( 'SELECT * FROM messages' );
 
+while ($row = $mes) {
+        
+     
+     echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<br>"?>  
 
-foreach ($mes as $key => $value) {
+    <form action="message.php " method="GET">
+    <button type="submit">Ответить</button>    
 
 
-	echo $key . "=>" . $value;
-	# code...
-}
+    <?php echo "<hr>";
+     
+    }
 
 
 
