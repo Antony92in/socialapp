@@ -4,15 +4,21 @@ require "db.php";
 
 $querying = R::exec( 'SELECT * FROM messages WHERE touser = 'Baracus'' );
 
-foreach ($variable as $key => $value) {
+if (isset($querying)) {
+    /* извлечение ассоциативного массива */
+    while ($row = mysqli_fetch_assoc($querying)) {
+        
+     
+     echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<br>"?>  
+
+    <form action="message.php " method="GET">
+    <button type="submit">Ответить</button>    
 
 
-	echo $key . "<br>";
-
-	echo $value . "<hr>";
-	# code...
-}
-
+    <?php echo "<hr>";
+     
+    }
+  }
 
 
 
