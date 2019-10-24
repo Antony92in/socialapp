@@ -1,5 +1,8 @@
 <?php
 
+require "db.php";
+
+
 $mes = R::getAll( 'SELECT * FROM messages' );
 
 
