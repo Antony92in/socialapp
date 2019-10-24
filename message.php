@@ -4,7 +4,7 @@
 
 require "db.php";
 
-mysqli_set_charset('utf8');
+
 
 
 
