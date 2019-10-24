@@ -23,7 +23,7 @@ if ($result = mysqli_query($link, $query)) {
     while ($row = mysqli_fetch_assoc($result)) {
         
      
-     echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<br>" . $row["date"] . "<br>" ?>  
+     echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<br>" ?>  
 
     <form action="message.php " method="GET">
     <button type="submit">Ответить</button>    
