@@ -5,6 +5,8 @@ header('Content-Type: text/html; charset=utf-8');
 
 require "db.php";
 
+mysqli_set_charset('utf8');
+
 
 
 $data = $_POST;
