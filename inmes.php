@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 
 $name = $_SESSION['logged_user']->login;
 
