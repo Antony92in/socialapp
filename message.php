@@ -1,7 +1,6 @@
 <?php 
 
-error_reporting(-1);
-header('Content-Type: text/html; charset=utf-8');
+
 
 require "db.php";
 
@@ -15,9 +14,9 @@ $users = R::getCol( 'SELECT login FROM users' );
  
 if (isset($_REQUEST{'send'})) {
     $message = R::dispense('messages');
-	$message->from = $_SESSION['logged_user']->login;
-    $message->to = $_POST['select'];
-    $message->text = $_POST['message'] ;
+	$message->fromuser = $_SESSION['logged_user']->login;
+    $message->touser = $_POST['select'];
+    $message->textmes = $_POST['message'] ;
     R::store( $message );
 
 

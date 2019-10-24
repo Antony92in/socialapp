@@ -1,7 +1,6 @@
 <?php
 
-error_reporting(-1);
-header('Content-Type: text/html; charset=utf-8');
+
 
 $name = $_SESSION['logged_user']->login;
 
@@ -10,7 +9,7 @@ $link = mysqli_connect("ec2-54-247-72-30.eu-west-1.compute.amazonaws.com", "zbkd
 
 mysqli_set_charset('utf8');
 
-$query = ( "SELECT * FROM `messages` WHERE `to` = '{$name}' ");
+$query = ( "SELECT * FROM `messages` WHERE `touser` = '{$name}' ");
 
 
 $result = mysqli_query($link, $query);
@@ -24,7 +23,7 @@ if ($result = mysqli_query($link, $query)) {
     while ($row = mysqli_fetch_assoc($result)) {
         
      
-     echo "От :" . $row["from"] . "<br>" . $row["text"] . "<br>" . $row["date"] . "<br>" ?>  
+     echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<br>" . $row["date"] . "<br>" ?>  
 
     <form action="message.php " method="GET">
     <button type="submit">Ответить</button>    
