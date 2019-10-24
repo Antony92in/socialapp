@@ -2,16 +2,47 @@
 
 require "db.php";
 
-$column = R::getCol( 'SELECT textmes FROM messages' );
+$querying = R::exec( 'SELECT * FROM messages WHERE touser = 'Baracus'' );
 
-$countcol = count($column);
+if (isset($querying)) {
+    /* извлечение ассоциативного массива */
+    while ($row = $querying) {
+        
+     
+     echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<br>" ?>  
 
-foreach ($column as $key) {
+    <form action="message.php " method="GET">
+    <button type="submit">Ответить</button>    
 
 
-	echo $key . "<br>";
-	# code...
-}
+    <?php echo "<hr>";
+     
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $countcol = count($column);
+
+// foreach ($column as $key) {
+
+
+// 	echo $key . "<br>";
+// 	# code...
+// }
 
 
 
