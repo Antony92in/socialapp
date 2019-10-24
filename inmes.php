@@ -36,7 +36,7 @@ if ($result = mysqli_query($link, $query)) {
   }
 
 /* закрытие соединения */
-mysqli_close($link);
+//mysqli_close($link);
 
 
 ?>
