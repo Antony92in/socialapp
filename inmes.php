@@ -8,7 +8,7 @@ $name = $_SESSION['logged_user']->login;
 
 $link = mysqli_connect("ec2-54-247-72-30.eu-west-1.compute.amazonaws.com", "zbkdvrivshuesq", "f8a99eafa9a3e1982aa35726fc67d5d21918d410883542131c0b37c2d77bfcd1", "d1iuf40nr11r3q");
 
-$link->set_charset("utf8");
+mysqli_set_charset('utf8');
 
 $query = ( "SELECT * FROM `messages` WHERE `to` = '{$name}' ");
 
