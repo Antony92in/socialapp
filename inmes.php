@@ -2,7 +2,7 @@
 
 $link = mysqli_connect("ec2-54-247-72-30.eu-west-1.compute.amazonaws.com", "zbkdvrivshuesq", "f8a99eafa9a3e1982aa35726fc67d5d21918d410883542131c0b37c2d77bfcd1", "d1iuf40nr11r3q");
 
-
+mysqli_set_charset($link, 'utf8');
 
 
 $query = ( "SELECT * FROM messages WHERE touser = 'Baracus' ");
@@ -12,7 +12,7 @@ $name = $_SESSION['logged_user']->login;
 
 $result = mysqli_query($link, $query);
 
-mysqli_set_charset($link, 'utf8');
+
 
 //print_r($result);
 
