@@ -1,6 +1,7 @@
 <?php
 
-
+error_reporting(-1);
+header('Content-Type: text/html; charset=utf-8');
 
 $name = $_SESSION['logged_user']->login;
 
