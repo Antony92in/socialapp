@@ -1,6 +1,6 @@
 <?php
 
-require "db.php";
+
 
 $name = $_SESSION['logged_user']->login;
 
