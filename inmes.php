@@ -5,7 +5,9 @@ require "db.php";
 
 $mes = R::getAll( 'SELECT * FROM messages' );
 
-while ($row = $mes) {
+$count = count($mes);
+
+while ($row <= $count) {
         
      
      echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<br>"?>  
