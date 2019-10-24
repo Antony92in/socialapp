@@ -6,7 +6,12 @@ require "db.php";
 $mes = R::getAll( 'SELECT * FROM messages' );
 
 
-echo $mes;
+foreach ($mes as $key => $value) {
+
+
+	echo $key . "=>" . $value;
+	# code...
+}
 
 
 
