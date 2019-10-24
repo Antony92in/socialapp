@@ -1,14 +1,11 @@
 <?php
 
-
-
-$name = $_SESSION['logged_user']->login;
-
-
 $link = mysqli_connect("ec2-54-247-72-30.eu-west-1.compute.amazonaws.com", "zbkdvrivshuesq", "f8a99eafa9a3e1982aa35726fc67d5d21918d410883542131c0b37c2d77bfcd1", "d1iuf40nr11r3q");
 
 
 $query = ( "SELECT * FROM messages WHERE touser = 'Baracus' ");
+
+$name = $_SESSION['logged_user']->login;
 
 
 $result = mysqli_query($link, $query);
@@ -16,7 +13,7 @@ $result = mysqli_query($link, $query);
 //print_r($result);
 
 
-if ($result = mysqli_query($link, $query)) {
+if (isset($result)) {
 
     /* извлечение ассоциативного массива */
     while ($row = mysqli_fetch_assoc($result)) {
@@ -34,7 +31,7 @@ if ($result = mysqli_query($link, $query)) {
 
     }
 
-  }
+  } else { echo "string";}
 
 /* закрытие соединения */
 //mysqli_close($link);
