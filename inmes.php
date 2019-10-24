@@ -5,20 +5,20 @@ session_start();
 $name = $_SESSION['logged_user']->login;
 
 
-$link = mysqli_connect("ec2-54-247-72-30.eu-west-1.compute.amazonaws.com", "zbkdvrivshuesq", "f8a99eafa9a3e1982aa35726fc67d5d21918d410883542131c0b37c2d77bfcd1", "public");
+$link = mysql_connect("ec2-54-247-72-30.eu-west-1.compute.amazonaws.com", "zbkdvrivshuesq", "f8a99eafa9a3e1982aa35726fc67d5d21918d410883542131c0b37c2d77bfcd1", "public");
 
 $query = ( "SELECT * FROM messages WHERE to = Antony1 ");
 
 
-$result = mysqli_query($link, $query);
+$result = mysql_query($link, $query);
 
 //print_r($result);
 
 
-if ($result = mysqli_query($link, $query)) {
+if ($result = mysql_query($link, $query)) {
 
     /* извлечение ассоциативного массива */
-    while ($row = mysqli_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         
      
      echo "От :" . $row["from"] . "<br>" . $row["text"] . "<br>" . $row["date"] . "<br>" ?>  
