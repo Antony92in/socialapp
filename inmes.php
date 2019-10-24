@@ -9,7 +9,7 @@ $link = mysqli_connect("ec2-54-247-72-30.eu-west-1.compute.amazonaws.com", "zbkd
 
 mysqli_set_charset('utf8');
 
-$query = ( 'SELECT * FROM messages WHERE touser = '{$name}' ');
+$query = ( "SELECT * FROM messages WHERE touser = 'Baracus' ");
 
 
 $result = mysqli_query($link, $query);
