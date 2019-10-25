@@ -5,8 +5,10 @@ require "db.php";
 
 $inmes = R::exec( "SELECT * FROM messages WHERE touser = 'Baracus'" );
 
+$count = count($inmes);
 
-for ($i=0; $i < 10; $i++) { 
+
+for ($i=0; $i < $count; $i++) { 
 
 
 	echo $inmes[] . "<hr>";
