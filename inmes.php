@@ -5,7 +5,7 @@ require "db.php";
 $name = $_SESSION['logged_user']->login;
 
 
-$rb = R::getAll( "SELECT * FROM `messages` WHERE `to` = '{$name}'" );
+$rb = R::getAll( "SELECT * FROM messages WHERE touser = 'Baracus'" );
 
 
 
