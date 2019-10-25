@@ -2,11 +2,18 @@
 
 require "db.php";
 
+$name = $_SESSION['logged_user']->login;
 
-$inmes = array(R::exec( "SELECT * FROM messages WHERE touser = 'Baracus'" ));
 
-print_r($inmes);
+$rb = R::getAll( "SELECT * FROM `messages` WHERE `to` = '{$name}'" );
 
+
+
+foreach ($rb as $row) {
+
+	echo "От :" . $row["from"] . "<br>" . $row["text"] . "<br>" . $row["date"] . "<hr>";
+	# code...
+}
 
 
 
