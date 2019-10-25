@@ -11,7 +11,7 @@ $rb = R::getAll( "SELECT * FROM messages WHERE touser = 'Baracus'" );
 
 foreach ($rb as $row) {
 
-	echo "От :" . $row["from"] . "<br>" . $row["text"] . "<br>" . $row["date"] . "<hr>";
+	echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<hr>";
 	# code...
 }
 
