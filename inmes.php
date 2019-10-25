@@ -5,17 +5,17 @@ require "db.php";
 $name = $_SESSION['logged_user']->login;
 
 
-$rb = R::getAll( "SELECT * FROM messages WHERE touser = 'Baracus'" );
+$rb = R::getAll( "SELECT * FROM messages WHERE touser = '{$name}'" );
 
 
 
 foreach ($rb as $row) {
 
-	echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<hr>";
+	echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<br>" . $row["date"] . "<hr>";
 	# code...
 }
 
-
+// рабочий скрипт на хероку!!!(добавить дату в сообщения)
 
 
 
