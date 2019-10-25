@@ -6,8 +6,12 @@ require "db.php";
 $inmes = R::exec( "SELECT * FROM messages WHERE touser = 'Baracus'" );
 
 
-print_r($inmes[0]);
+for ($i=0; $i < 10; $i++) { 
 
+
+	echo $inmes[] . "<hr>";
+	# code...
+}
 
 
 
