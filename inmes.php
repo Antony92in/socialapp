@@ -16,21 +16,6 @@ foreach ($rb as $row) {
 }
 
 
-
-
-// $link = mysqli_connect("localhost", "root", "s1jk7310421wl", "socialapp");
-
-// $query = ( "SELECT * FROM `messages` WHERE `to` = '{$name}' ");
-
-
-// $result = mysqli_query($link, $query);
-
-// //print_r($result);
-
-
- 
-
-
 ?>
 
 
