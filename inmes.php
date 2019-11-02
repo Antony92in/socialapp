@@ -5,42 +5,43 @@ require "db.php";
 $name = $_SESSION['logged_user']->login;
 
 
-$rb = R::getAll( "SELECT * FROM messages WHERE touser = '{$name}'" );
+$rb = R::getAll( "SELECT * FROM `messages` WHERE `to` = '{$name}' ORDER BY `date` DESC" );
 
 
 
 foreach ($rb as $row) {
 
-	echo "От :" . $row["fromuser"] . "<br>" . $row["textmes"] . "<br>" . $row["date"] . "<hr>";
+	echo "От :" . $row["from"] . "<br>" . $row["text"] . "<br>" . $row["date"] . "<hr>";
 	# code...
 }
 
-// рабочий скрипт на хероку!!!
 
 
 
+// $link = mysqli_connect("localhost", "root", "s1jk7310421wl", "socialapp");
+
+// $query = ( "SELECT * FROM `messages` WHERE `to` = '{$name}' ");
 
 
+// $result = mysqli_query($link, $query);
+
+// //print_r($result);
 
 
-
-
-
-
-
-// $countcol = count($column);
-
-// foreach ($column as $key) {
-
-
-// 	echo $key . "<br>";
-// 	# code...
-// }
-
-
-
+ 
 
 
 ?>
 
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Входящие сообщения</title>
+</head>
+<body>
+   
+</form>
+
+</body>
+</html>
